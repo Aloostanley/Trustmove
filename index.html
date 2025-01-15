@@ -5,49 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrustMove Events - Creative Agency</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         :root {
-            --color-beige: #F5F5DC;
-            --color-light-purple: #E6E6FA;
-            --color-dark-purple: #51285C;
+            --color-castleton-green: #00563f;  /* Castleton Green */
+            --color-castleton-green-light: #24715a;  /* Light Castleton Green */
+            --color-castleton-green-lighter: #4A8A73; /* Lighter Castleton Green */
+            --color-light-grey: #D3D3D3; /* Light Grey */
         }
-        @font-face {
-            font-family: 'Brooklyn';
-            src: url('Brooklyn-Regular.woff2') format('woff2'),
-                url('Brooklyn-Regular.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
+         body {
+            background-color: var(--color-castleton-green);
+            color: var(--color-light-grey);
+            font-family: 'Fredoka', sans-serif;
         }
-        body {
-            background-color: var(--color-beige);
-            color: var(--color-dark-purple);
-            font-family: 'Brooklyn', sans-serif;
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Fredoka', sans-serif;
+           font-weight: 600; /* Semi-bold for headings */
         }
-        .bg-beige { background-color: var(--color-beige); }
-        .bg-light-purple { background-color: var(--color-light-purple); }
-        .text-dark-purple { color: var(--color-dark-purple); }
-        .nav-link { color: var(--color-dark-purple); text-decoration: none; transition: opacity 0.2s; }
+        .bg-castleton-green { background-color: var(--color-castleton-green); }
+        .bg-castleton-green-light { background-color: var(--color-castleton-green-light); }
+        .bg-castleton-green-lighter{ background-color: var(--color-castleton-green-lighter);}
+        .bg-white { background-color: var(--color-white); }
+        .text-castleton-green { color: var(--color-castleton-green); }
+        .text-light-grey { color: var(--color-light-grey); }
+        .nav-link { color: var(--color-light-grey); text-decoration: none; transition: opacity 0.2s; }
         .nav-link:hover { opacity: 0.7; }
-        .button { background-color: var(--color-light-purple); color: var(--color-dark-purple); padding: 0.75rem 2rem; display: inline-block; transition: opacity 0.2s; text-decoration: none; }
+        .button { background-color: var(--color-light-grey); color: var(--color-castleton-green); padding: 0.75rem 2rem; display: inline-block; transition: opacity 0.2s; text-decoration: none; }
         .button:hover { opacity: 0.8; }
-        .service-card { background-color: var(--color-light-purple); padding: 2rem; height: 100%; }
-         .logo-container { display: flex; align-items: center; margin-right: 0.5rem; }
-        .logo-img { max-height: 30px; margin-right: 0.5rem; }
+        .service-card { background-color: var(--color-castleton-green-light); padding: 2rem; height: 100%;  border: 1px solid var(--color-light-grey); }
+         .logo-container {
+             display: flex;
+            flex-direction: column;
+             align-items: flex-start; /* Align items to the start (left) */
+            }
+         .logo-img {
+          width: 250px;   /* Set the width of the logo */
+          height: auto; /* Maintain aspect ratio */
+           max-width: 250px;
+           max-height: 400px;
+          margin-top: 0.5rem; }
         .logo-caption { font-size: 0.8rem; white-space: nowrap; }
          #gallery-section { display: none;}
+        .contact-item {
+           display: flex;
+           align-items: center;
+           margin-bottom: 0.5rem;
+          }
+         .contact-item i {
+           margin-right: 0.5rem; /* Spacing for the icons */
+          }
     </style>
 </head>
 <body>
-    <nav class="p-6">
+    <nav class="p-6 bg-castleton-green">
         <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center">
-                <h1 class="text-2xl font-bold mr-4">
-                    <a href="#" class="flex items-center">
-                         <span class="logo-container">
-                            <img src="logo.png" alt="TrustMove Logo" class="logo-img">
-                         </span>
-                        <span class="ml-2">TrustMove</span>
-                     </a>
+           <div class="flex items-start flex-col">
+                <h1 class="text-2xl font-bold mr-4 text-light-grey">
+                  TrustMove
                  </h1>
             </div>
             <div class="hidden md:flex space-x-8">
@@ -59,13 +74,13 @@
             </div>
             <div class="md:hidden">
                 <button id="mobile-menu-button" class="focus:outline-none">
-                    <svg class="h-6 w-6 text-dark-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="h-6 w-6 text-light-grey" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
             </div>
         </div>
-          <div id="mobile-menu" class="hidden md:hidden bg-light-purple mt-2 py-2">
+          <div id="mobile-menu" class="hidden md:hidden bg-castleton-green-light mt-2 py-2">
             <div class="flex flex-col items-center space-y-2">
                 <a href="#about" class="nav-link py-2 block">About</a>
                 <a href="#services" class="nav-link py-2 block">Services</a>
@@ -75,51 +90,54 @@
             </div>
         </div>
     </nav>
-    <header class="py-16 md:py-20 px-4">
+    <header class="py-16 md:py-20 px-4 bg-castleton-green">
         <div class="container mx-auto max-w-6xl">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div>
-                    <h1 class="text-4xl md:text-6xl font-light mb-4 md:mb-6">Creating Memorable Experiences</h1>
-                    <p class="text-lg md:text-xl opacity-80 mb-6 md:mb-8">Your trusted partner for events, moving, and production solutions in Kenya</p>
+                    <h1 class="text-4xl md:text-6xl font-light mb-4 md:mb-6 text-light-grey">Creating Memorable Experiences</h1>
+                    <p class="text-lg md:text-xl opacity-80 mb-6 md:mb-8 text-light-grey">Your trusted partner for events, moving, and production solutions in Kenya</p>
                     <a href="#contact" class="button">Get Started</a>
                 </div>
                 <div>
-                    <img src="/api/placeholder/600/400" alt="Hero Image" class="w-full object-cover">
+                   <div class="relative rounded-xl overflow-hidden border-2 border-castleton-green shadow-md">
+                         <div class="absolute inset-0 bg-castleton-green opacity-20"></div>
+                        <img src="Assets/placeholder600400.jpg" alt="Hero Image" class="w-full object-cover rounded-xl">
+                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <section id="about" class="py-16 md:py-20 bg-light-purple">
+    <section id="about" class="py-16 md:py-20 bg-castleton-green-light">
         <div class="container mx-auto max-w-6xl px-4">
              <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-light mb-6 md:mb-8">Our Story</h2>
-                    <p class="opacity-80 leading-relaxed">
+                    <h2 class="text-3xl md:text-4xl font-light mb-6 md:mb-8 text-light-grey">Our Story</h2>
+                    <p class="opacity-80 leading-relaxed text-light-grey">
                         TrustMove Events is a dynamic and multifaceted company based in Nairobi, Kenya,
                         specializing in events management, moving services, and sound and production solutions.
                     </p>
                 </div>
                 <div class="space-y-8 md:space-y-12">
                     <div>
-                        <h3 class="text-xl md:text-2xl font-light mb-3 md:mb-4">Our Mission</h3>
-                        <p class="opacity-80">To relocate dreams and plan perfection by providing exceptional services that elevate
+                        <h3 class="text-xl md:text-2xl font-light mb-3 md:mb-4 text-light-grey">Our Mission</h3>
+                        <p class="opacity-80 text-light-grey">To relocate dreams and plan perfection by providing exceptional services that elevate
                         our clients' experiences.</p>
                     </div>
                     <div>
-                        <h3 class="text-xl md:text-2xl font-light mb-3 md:mb-4">Our Vision</h3>
-                        <p class="opacity-80">To be the go-to provider for events, moving, and production services in Kenya and beyond.</p>
+                        <h3 class="text-xl md:text-2xl font-light mb-3 md:mb-4 text-light-grey">Our Vision</h3>
+                        <p class="opacity-80 text-light-grey">To be the go-to provider for events, moving, and production services in Kenya and beyond.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="services" class="py-16 md:py-20">
+    <section id="services" class="py-16 md:py-20 bg-castleton-green">
         <div class="container mx-auto max-w-6xl px-4">
-            <h2 class="text-3xl md:text-4xl font-light mb-12 md:mb-16 text-center">Our Services</h2>
+            <h2 class="text-3xl md:text-4xl font-light mb-12 md:mb-16 text-center text-light-grey">Our Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
                 <div class="service-card">
-                    <h3 class="text-xl md:text-2xl font-light mb-4 md:mb-6">Events Management</h3>
-                    <ul class="space-y-3 md:space-y-4 opacity-80">
+                    <h3 class="text-xl md:text-2xl font-light mb-4 md:mb-6 text-light-grey">Events Management</h3>
+                    <ul class="space-y-3 md:space-y-4 opacity-80 text-light-grey">
                         <li>Event Conceptualization</li>
                         <li>Venue Selection</li>
                         <li>Catering Management</li>
@@ -127,8 +145,8 @@
                     </ul>
                 </div>
                  <div class="service-card">
-                    <h3 class="text-xl md:text-2xl font-light mb-4 md:mb-6">Moving Services</h3>
-                    <ul class="space-y-3 md:space-y-4 opacity-80">
+                    <h3 class="text-xl md:text-2xl font-light mb-4 md:mb-6 text-light-grey">Moving Services</h3>
+                    <ul class="space-y-3 md:space-y-4 opacity-80 text-light-grey">
                         <li>Packing and Unpacking</li>
                         <li>Transportation</li>
                         <li>Office Relocations</li>
@@ -136,8 +154,8 @@
                     </ul>
                 </div>
                 <div class="service-card">
-                    <h3 class="text-xl md:text-2xl font-light mb-4 md:mb-6">Sound & Production</h3>
-                    <ul class="space-y-3 md:space-y-4 opacity-80">
+                    <h3 class="text-xl md:text-2xl font-light mb-4 md:mb-6 text-light-grey">Sound & Production</h3>
+                    <ul class="space-y-3 md:space-y-4 opacity-80 text-light-grey">
                         <li>Sound System Installation</li>
                         <li>Lighting Design</li>
                         <li>Stage Design</li>
@@ -147,144 +165,155 @@
            </div>
         </div>
     </section>
-    <section id="team" class="py-16 md:py-20 bg-light-purple">
+    <section id="team" class="py-16 md:py-20 bg-castleton-green-light">
         <div class="container mx-auto max-w-6xl px-4">
-            <h2 class="text-3xl md:text-4xl font-light mb-12 md:mb-16 text-center">Our Team</h2>
+            <h2 class="text-3xl md:text-4xl font-light mb-12 md:mb-16 text-center text-light-grey">Our Team</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
                 <div class="text-center">
-                    <img src="/api/placeholder/300/300" alt="Collins Kamau" class="w-full mb-4 md:mb-6 rounded-full object-cover">
-                    <h3 class="text-xl md:text-2xl font-light">Collins Kamau</h3>
-                    <p class="opacity-80">Operations Director</p>
+                    <img src="Assets/placeholder300300.jpg" alt="Collins Kamau" class="w-full mb-4 md:mb-6 rounded-full object-cover">
+                    <h3 class="text-xl md:text-2xl font-light text-light-grey">Collins Kamau</h3>
+                    <p class="opacity-80 text-light-grey">Operations Director</p>
                 </div>
                 <div class="text-center">
-                    <img src="/api/placeholder/300/300" alt="Doreen Nyaboke" class="w-full mb-4 md:mb-6 rounded-full object-cover">
-                    <h3 class="text-xl md:text-2xl font-light">Doreen Nyaboke</h3>
-                    <p class="opacity-80">Client Relations Manager</p>
+                    <img src="Assets/placeholder300300.jpg" alt="Doreen Nyaboke" class="w-full mb-4 md:mb-6 rounded-full object-cover">
+                    <h3 class="text-xl md:text-2xl font-light text-light-grey">Doreen Nyaboke</h3>
+                    <p class="opacity-80 text-light-grey">Client Relations Manager</p>
                 </div>
                 <div class="text-center">
-                    <img src="/api/placeholder/300/300" alt="Stanley Mike Aloo" class="w-full mb-4 md:mb-6 rounded-full object-cover">
-                    <h3 class="text-xl md:text-2xl font-light">Stanley Mike Aloo</h3>
-                    <p class="opacity-80">Technical Director</p>
+                    <img src="Assets/placeholder300300.jpg" alt="Stanley Mike Aloo" class="w-full mb-4 md:mb-6 rounded-full object-cover">
+                    <h3 class="text-xl md:text-2xl font-light text-light-grey">Stanley Mike Aloo</h3>
+                    <p class="opacity-80 text-light-grey">Technical Director</p>
                 </div>
             </div>
         </div>
     </section>
-    <section id="contact" class="py-16 md:py-20">
+    <section id="contact" class="py-16 md:py-20 bg-castleton-green">
         <div class="container mx-auto max-w-6xl px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-light mb-6 md:mb-8">Get in Touch</h2>
-                    <p class="opacity-80 mb-4">Let's create something amazing together.</p>
+                    <h2 class="text-3xl md:text-4xl font-light mb-6 md:mb-8 text-light-grey">Get in Touch</h2>
+                    <p class="opacity-80 mb-4 text-light-grey">Let's create something amazing together.</p>
                 </div>
-                 <div class="space-y-4">
-                    <p>TrustMove Events Ltd.</p>
-                    <p>23588 - 00100</p>
-                    <p>Phone: <a href="tel:+254748891609" class="text-dark-purple hover:opacity-80">+254748891609</a></p>
-                    <p>Email: <a href="mailto:trustmoveevents@gmail.com" class="text-dark-purple hover:opacity-80">trustmoveevents@gmail.com</a></p>
-                 </div>
+                <div class="space-y-4 text-light-grey">
+                     <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                       <p>TrustMove Events Ltd.</p>
+                    </div>
+                     <div class="contact-item">
+                         <p>23588 - 00100</p>
+                     </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                         <p>Phone: <a href="tel:+254748891609" class="text-light-grey hover:opacity-80">+254748891609</a></p>
+                    </div>
+                    <div class="contact-item">
+                         <i class="fas fa-envelope"></i>
+                         <p>Email: <a href="mailto:trustmoveevents@gmail.com" class="text-light-grey hover:opacity-80">trustmoveevents@gmail.com</a></p>
+                     </div>
+                </div>
             </div>
         </div>
     </section>
-   <section id="gallery-section" class="py-16 md:py-20">
+   <section id="gallery-section" class="py-16 md:py-20 bg-castleton-green-lighter">
        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-light mb-12 text-center">Our Gallery</h2>
+            <h2 class="text-3xl md:text-4xl font-light mb-12 text-center text-light-grey">Our Gallery</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                 <div class="rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="/api/placeholder/400/300" alt="Company Image 1" class="w-full h-60 object-cover">
+                 <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
+                    <img src="Assets/placeholder400300.jpg" alt="Company Image 1" class="w-full h-60 object-cover rounded-xl">
                     <div class="p-4">
-                       <p class="text-dark-purple opacity-80">Description of image 1</p>
+                       <p class="text-light-grey opacity-80">Description of image 1</p>
                    </div>
                  </div>
-                <div class="rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                   <img src="/api/placeholder/400/300" alt="Company Image 2" class="w-full h-60 object-cover">
+                <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
+                   <img src="Assets/placeholder400300.jpg" alt="Company Image 2" class="w-full h-60 object-cover rounded-xl">
                    <div class="p-4">
-                        <p class="text-dark-purple opacity-80">Description of image 2</p>
+                        <p class="text-light-grey opacity-80">Description of image 2</p>
                     </div>
                 </div>
-                 <div class="rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="/api/placeholder/400/300" alt="Company Image 3" class="w-full h-60 object-cover">
+                 <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
+                    <img src="Assets/placeholder400300.jpg" alt="Company Image 3" class="w-full h-60 object-cover rounded-xl">
                    <div class="p-4">
-                        <p class="text-dark-purple opacity-80">Description of image 3</p>
+                        <p class="text-light-grey opacity-80">Description of image 3</p>
                    </div>
                  </div>
-                <div class="rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                   <img src="/api/placeholder/400/300" alt="Company Image 4" class="w-full h-60 object-cover">
+                <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
+                   <img src="Assets/placeholder400300.jpg" alt="Company Image 4" class="w-full h-60 object-cover rounded-xl">
                      <div class="p-4">
-                        <p class="text-dark-purple opacity-80">Description of image 4</p>
+                        <p class="text-light-grey opacity-80">Description of image 4</p>
                     </div>
                 </div>
-               <div class="rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                     <img src="/api/placeholder/400/300" alt="Company Image 5" class="w-full h-60 object-cover">
+               <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
+                     <img src="Assets/placeholder400300.jpg" alt="Company Image 5" class="w-full h-60 object-cover rounded-xl">
                      <div class="p-4">
-                        <p class="text-dark-purple opacity-80">Description of image 5</p>
+                        <p class="text-light-grey opacity-80">Description of image 5</p>
                      </div>
                  </div>
-                <div class="rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="/api/placeholder/400/300" alt="Company Image 6" class="w-full h-60 object-cover">
+                <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
+                    <img src="Assets/placeholder400300.jpg" alt="Company Image 6" class="w-full h-60 object-cover rounded-xl">
                     <div class="p-4">
-                        <p class="text-dark-purple opacity-80">Description of image 6</p>
+                        <p class="text-light-grey opacity-80">Description of image 6</p>
                     </div>
                 </div>
-                <div class="rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="/api/placeholder/400/300" alt="Company Image 7" class="w-full h-60 object-cover">
+                <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
+                    <img src="Assets/placeholder400300.jpg" alt="Company Image 7" class="w-full h-60 object-cover rounded-xl">
                     <div class="p-4">
-                       <p class="text-dark-purple opacity-80">Description of image 7</p>
+                       <p class="text-light-grey opacity-80">Description of image 7</p>
                     </div>
                </div>
-                <div class="rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="/api/placeholder/400/300" alt="Company Image 8" class="w-full h-60 object-cover">
+                <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
+                    <img src="Assets/placeholder400300.jpg" alt="Company Image 8" class="w-full h-60 object-cover rounded-xl">
                     <div class="p-4">
-                         <p class="text-dark-purple opacity-80">Description of image 8</p>
+                         <p class="text-light-grey opacity-80">Description of image 8</p>
                     </div>
                 </div>
-               <div class="rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="/api/placeholder/400/300" alt="Company Image 9" class="w-full h-60 object-cover">
+               <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
+                    <img src="Assets/placeholder400300.jpg" alt="Company Image 9" class="w-full h-60 object-cover rounded-xl">
                     <div class="p-4">
-                        <p class="text-dark-purple opacity-80">Description of image 9</p>
+                        <p class="text-light-grey opacity-80">Description of image 9</p>
                     </div>
                 </div>
-               <div class="rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                   <img src="/api/placeholder/400/300" alt="Company Image 10" class="w-full h-60 object-cover">
+               <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
+                   <img src="Assets/placeholder400300.jpg" alt="Company Image 10" class="w-full h-60 object-cover rounded-xl">
                     <div class="p-4">
-                        <p class="text-dark-purple opacity-80">Description of image 10</p>
+                        <p class="text-light-grey opacity-80">Description of image 10</p>
                     </div>
                </div>
-               <div class="rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="/api/placeholder/400/300" alt="Company Image 11" class="w-full h-60 object-cover">
+               <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
+                    <img src="Assets/placeholder400300.jpg" alt="Company Image 11" class="w-full h-60 object-cover rounded-xl">
                     <div class="p-4">
-                       <p class="text-dark-purple opacity-80">Description of image 11</p>
+                       <p class="text-light-grey opacity-80">Description of image 11</p>
                     </div>
                </div>
-               <div class="rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                     <img src="/api/placeholder/400/300" alt="Company Image 12" class="w-full h-60 object-cover">
+               <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
+                     <img src="Assets/placeholder400300.jpg" alt="Company Image 12" class="w-full h-60 object-cover rounded-xl">
                      <div class="p-4">
-                         <p class="text-dark-purple opacity-80">Description of image 12</p>
+                         <p class="text-light-grey opacity-80">Description of image 12</p>
                     </div>
                  </div>
-                <div class="rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                     <img src="/api/placeholder/400/300" alt="Company Image 13" class="w-full h-60 object-cover">
+                <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
+                     <img src="Assets/placeholder400300.jpg" alt="Company Image 13" class="w-full h-60 object-cover rounded-xl">
                     <div class="p-4">
-                        <p class="text-dark-purple opacity-80">Description of image 13</p>
+                        <p class="text-light-grey opacity-80">Description of image 13</p>
                     </div>
                </div>
-                <div class="rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                   <img src="/api/placeholder/400/300" alt="Company Image 14" class="w-full h-60 object-cover">
+                <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
+                   <img src="Assets/placeholder400300.jpg" alt="Company Image 14" class="w-full h-60 object-cover rounded-xl">
                    <div class="p-4">
-                        <p class="text-dark-purple opacity-80">Description of image 14</p>
+                        <p class="text-light-grey opacity-80">Description of image 14</p>
                    </div>
                  </div>
-                <div class="rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="/api/placeholder/400/300" alt="Company Image 15" class="w-full h-60 object-cover">
+                <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
+                    <img src="Assets/placeholder400300.jpg" alt="Company Image 15" class="w-full h-60 object-cover rounded-xl">
                    <div class="p-4">
-                       <p class="text-dark-purple opacity-80">Description of image 15</p>
+                       <p class="text-light-grey opacity-80">Description of image 15</p>
                    </div>
                  </div>
             </div>
         </div>
     </section>
-    <footer class="py-6 md:py-8 bg-light-purple">
+    <footer class="py-6 md:py-8 bg-castleton-green">
         <div class="container mx-auto max-w-6xl px-4 text-center">
-            <p class="opacity-80">© 2025 TrustMove Events. All rights reserved.</p>
+            <p class="opacity-80 text-light-grey">© 2025 TrustMove Events. All rights reserved.</p>
         </div>
     </footer>
    <script>
@@ -331,4 +360,4 @@
          });
     </script>
 </body>
-</html>
+</html>g
