@@ -55,6 +55,33 @@
          .contact-item i {
            margin-right: 0.5rem; /* Spacing for the icons */
           }
+         #services-page {
+            display: none;
+        }
+         .price-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+          }
+        .price-item .price-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        .price-item .image-placeholder {
+           width: 100%;
+           height: 200px; /* Adjust as needed */
+          background-color: #eee;
+         border-radius: 0.5rem;
+          margin-top: 0.5rem;
+           display: flex;
+           align-items: center;
+          justify-content: center;
+           color: #aaa;
+            font-size: 1.2rem;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -68,6 +95,7 @@
             <div class="hidden md:flex space-x-8">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#services" class="nav-link">Services</a>
+                 <a href="#services-pricing" class="nav-link" id="services-pricing-link">Services & Pricing</a>
                 <a href="#gallery" class="nav-link" id="gallery-link">Gallery</a>
                 <a href="#team" class="nav-link">Team</a>
                 <a href="#contact" class="nav-link">Contact</a>
@@ -84,6 +112,7 @@
             <div class="flex flex-col items-center space-y-2">
                 <a href="#about" class="nav-link py-2 block">About</a>
                 <a href="#services" class="nav-link py-2 block">Services</a>
+                <a href="#services-pricing" class="nav-link py-2 block" id="mobile-services-pricing-link">Services & Pricing</a>
                  <a href="#gallery" class="nav-link py-2 block" id="mobile-gallery-link">Gallery</a>
                 <a href="#team" class="nav-link py-2 block">Team</a>
                 <a href="#contact" class="nav-link py-2 block">Contact</a>
@@ -213,131 +242,218 @@
                 </div>
             </div>
         </div>
+        
     </section>
-   <section id="gallery-section" class="py-16 md:py-20 bg-castleton-green-lighter">
-       <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-light mb-12 text-center text-light-grey">Our Gallery</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                 <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="Assets/1.jpeg" alt="Company Image 1" class="w-full h-60 object-cover rounded-xl">
-                    <div class="p-4">
-                       <p class="text-light-grey opacity-80">Description of image 1</p>
-                   </div>
-                 </div>
-                <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                   <img src="Assets/2.jpeg" alt="Company Image 2" class="w-full h-60 object-cover rounded-xl">
-                   <div class="p-4">
-                        <p class="text-light-grey opacity-80">Description of image 2</p>
-                    </div>
-                </div>
-                 <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="Assets/3.jpeg" alt="Company Image 3" class="w-full h-60 object-cover rounded-xl">
-                   <div class="p-4">
-                        <p class="text-light-grey opacity-80">Description of image 3</p>
-                   </div>
-                 </div>
-                <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                   <img src="Assets/4.jpeg" alt="Company Image 4" class="w-full h-60 object-cover rounded-xl">
-                     <div class="p-4">
-                        <p class="text-light-grey opacity-80">Description of image 4</p>
-                    </div>
-                </div>
-               <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                     <img src="Assets/5.jpeg" alt="Company Image 5" class="w-full h-60 object-cover rounded-xl">
-                     <div class="p-4">
-                        <p class="text-light-grey opacity-80">Description of image 5</p>
+     <section id="services-page" class="py-16 md:py-20 bg-castleton-green-lighter">
+         <div class="container mx-auto max-w-6xl px-4">
+           <h2 class="text-3xl md:text-4xl font-light mb-12 text-center text-light-grey">Luxury Event Services & Pricing Guide</h2>
+            <p class="text-center text-light-grey opacity-80 mb-8">Creating Unforgettable Moments</p>
+
+              <h3 class="text-2xl font-semibold mb-6 text-light-grey">Our Premium Tent Solutions</h3>
+               <p class="text-light-grey opacity-80 mb-4">Transform any space into an elegant venue with our selection of premium tents:</p>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4 text-light-grey">Classic Plain Tents</h4>
+                     <div class="price-item">
+                       <div class="price-container">
+                        <p class="text-light-grey opacity-80">Large Events (100 guests):</p>
+                         <p class="text-light-grey font-semibold">3,500 KSH</p>
+                        </div>
+                        <div class="image-placeholder">Image placeholder for 100 guest tent</div>
+                      </div>
+                       <div class="price-item">
+                       <div class="price-container">
+                         <p class="text-light-grey opacity-80">Medium Events (50 guests):</p>
+                           <p class="text-light-grey font-semibold">2,500 KSH</p>
+                          </div>
+                        <div class="image-placeholder">Image placeholder for 50 guest tent</div>
+                      </div>
+                      <div class="price-item">
+                       <div class="price-container">
+                        <p class="text-light-grey opacity-80">Intimate Gatherings (20 guests):</p>
+                         <p class="text-light-grey font-semibold">2,000 KSH</p>
+                         </div>
+                          <div class="image-placeholder">Image placeholder for 20 guest tent</div>
                      </div>
-                 </div>
-                <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="Assets/6.jpeg" alt="Company Image 6" class="w-full h-60 object-cover rounded-xl">
-                    <div class="p-4">
-                        <p class="text-light-grey opacity-80">Description of image 6</p>
-                    </div>
+                     <div class="price-item">
+                       <div class="price-container">
+                          <p class="text-light-grey opacity-80">Specialty 3x3m Tent:</p>
+                           <p class="text-light-grey font-semibold">2,000 KSH</p>
+                           </div>
+                         <div class="image-placeholder">Image placeholder for 3x3m tent</div>
+                      </div>
+
+                   <p class="text-light-grey opacity-80 mt-4">Enhance your event with our colored tent options for an additional 2,000 KSH</p>
                 </div>
-                <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="Assets/7.png" alt="Company Image 7" class="w-full h-60 object-cover rounded-xl">
-                    <div class="p-4">
-                       <p class="text-light-grey opacity-80">Description of image 7</p>
-                    </div>
-               </div>
-                <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="Assets/8.png" alt="Company Image 8" class="w-full h-60 object-cover rounded-xl">
-                    <div class="p-4">
-                         <p class="text-light-grey opacity-80">Description of image 8</p>
-                    </div>
+                 <h3 class="text-2xl font-semibold mb-6 text-light-grey mt-12">Elegant Seating Options</h3>
+                  <p class="text-light-grey opacity-80 mb-4">Choose from our carefully curated selection of seating options:</p>
+                 <div>
+                     <h4 class="text-xl font-semibold mb-4 text-light-grey">Premium Seating</h4>
+                     <div class="price-item">
+                       <div class="price-container">
+                       <p class="text-light-grey opacity-80">Chiavari Chairs:</p>
+                        <p class="text-light-grey font-semibold">150 KSH per seat</p>
+                         </div>
+                         <div class="image-placeholder">Image placeholder for chiavari chairs</div>
+                     </div>
+                      <div class="price-item">
+                       <div class="price-container">
+                         <p class="text-light-grey opacity-80">Banquet Chairs:</p>
+                           <p class="text-light-grey font-semibold">150 KSH per seat</p>
+                           </div>
+                         <div class="image-placeholder">Image placeholder for banquet chairs</div>
+                     </div>
+                      <h4 class="text-xl font-semibold mb-4 text-light-grey">Classic Seating</h4>
+                     <div class="price-item">
+                       <div class="price-container">
+                        <p class="text-light-grey opacity-80">Dressed Plastic Chairs (with elegant covers):</p>
+                         <p class="text-light-grey font-semibold">50 KSH per seat</p>
+                          </div>
+                           <div class="image-placeholder">Image placeholder for dressed plastic chairs</div>
+                       </div>
+                     <div class="price-item">
+                       <div class="price-container">
+                        <p class="text-light-grey opacity-80">Classic Plastic Chairs:</p>
+                        <p class="text-light-grey font-semibold">15 KSH per seat</p>
+                         </div>
+                          <div class="image-placeholder">Image placeholder for classic plastic chairs</div>
+                       </div>
+
+                 </div>
+                <h3 class="text-2xl font-semibold mb-6 text-light-grey mt-12">Bespoke Décor Services</h3>
+                  <p class="text-light-grey opacity-80 mb-4">Let us transform your venue with our premium décor packages, tailored to your vision:</p>
+                   <div>
+                         <h4 class="text-xl font-semibold mb-4 text-light-grey">Signature Décor Collection</h4>
+                          <div class="price-item">
+                              <div class="price-container">
+                                  <p class="text-light-grey opacity-80">Starting from:</p>
+                                 <p class="text-light-grey font-semibold">10,000 KSH to 20,000 KSH</p>
+                              </div>
+                            <div class="image-placeholder">Image placeholder for signature decor collection</div>
+                          </div>
+                         <ul class="text-light-grey opacity-80 ml-6 mb-4">
+                            <li>Custom table centre pieces</li>
+                            <li>Elegant balloon arrangements</li>
+                            <li>Luxurious fabric draping</li>
+                             <li>Strategic lighting enhancement</li>
+                             <li>Floral arrangements (starting from 750 KSH per bouquet)</li>
+                          </ul>
+                         <h4 class="text-xl font-semibold mb-4 text-light-grey">Specialty Décor Elements</h4>
+                           <div class="price-item">
+                              <div class="price-container">
+                                <p class="text-light-grey opacity-80">LED Chandelier Lighting (10-arm design):</p>
+                                  <p class="text-light-grey font-semibold">13,000 KSH</p>
+                                 </div>
+                                   <div class="image-placeholder">Image placeholder for chandelier lighting</div>
+                             </div>
+                         <div class="price-item">
+                              <div class="price-container">
+                             <p class="text-light-grey opacity-80">Curtain Light Displays: from</p>
+                             <p class="text-light-grey font-semibold">1,690 KSH</p>
+                            </div>
+                              <div class="image-placeholder">Image placeholder for curtain light display</div>
+                            </div>
+                        <div class="price-item">
+                           <div class="price-container">
+                           <p class="text-light-grey opacity-80">Premium Candle Holders: from</p>
+                            <p class="text-light-grey font-semibold">1,800 KSH</p>
+                           </div>
+                              <div class="image-placeholder">Image placeholder for candle holders</div>
+                         </div>
+                         <div class="price-item">
+                            <div class="price-container">
+                                <p class="text-light-grey opacity-80">Luxury Cake Stands: from</p>
+                              <p class="text-light-grey font-semibold">1,912 KSH</p>
+                               </div>
+                                <div class="image-placeholder">Image placeholder for cake stands</div>
+                            </div>
+                         <div class="price-item">
+                          <div class="price-container">
+                               <p class="text-light-grey opacity-80">Designer Vases: from</p>
+                                <p class="text-light-grey font-semibold">799 KSH</p>
+                            </div>
+                               <div class="image-placeholder">Image placeholder for designer vases</div>
+                           </div>
                 </div>
-               <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="Assets/9.png" alt="Company Image 9" class="w-full h-60 object-cover rounded-xl">
-                    <div class="p-4">
-                        <p class="text-light-grey opacity-80">Description of image 9</p>
-                    </div>
+                <h3 class="text-2xl font-semibold mb-6 text-light-grey mt-12">Entertainment Solutions</h3>
+                 <div class="price-item">
+                  <div class="price-container">
+                     <p class="text-light-grey opacity-80">Professional JBL Sound System:</p>
+                      <p class="text-light-grey font-semibold">14,000 KSH</p>
+                     </div>
+                      <div class="image-placeholder">Image placeholder for jbl sound system</div>
                 </div>
-               <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                   <img src="Assets/10.png" alt="Company Image 10" class="w-full h-60 object-cover rounded-xl">
-                    <div class="p-4">
-                        <p class="text-light-grey opacity-80">Description of image 10</p>
+                <h3 class="text-2xl font-semibold mb-6 text-light-grey mt-12">Additional Services</h3>
+                 <div class="price-item">
+                    <div class="price-container">
+                        <p class="text-light-grey opacity-80">Professional Setup and Transportation:</p>
+                         <p class="text-light-grey font-semibold">6,000-10,000 KSH</p>
+                       </div>
+                       <div class="image-placeholder">Image placeholder for professional setup</div>
+                         <p class="text-light-grey opacity-80 ml-6"> (based on location and quantity of items)</p>
                     </div>
-               </div>
-               <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="Assets/placeholder400300.jpg" alt="Company Image 11" class="w-full h-60 object-cover rounded-xl">
-                    <div class="p-4">
-                       <p class="text-light-grey opacity-80">Description of image 11</p>
-                    </div>
-               </div>
-               <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                     <img src="Assets/placeholder400300.jpg" alt="Company Image 12" class="w-full h-60 object-cover rounded-xl">
-                     <div class="p-4">
-                         <p class="text-light-grey opacity-80">Description of image 12</p>
-                    </div>
-                 </div>
-                <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                     <img src="Assets/placeholder400300.jpg" alt="Company Image 13" class="w-full h-60 object-cover rounded-xl">
-                    <div class="p-4">
-                        <p class="text-light-grey opacity-80">Description of image 13</p>
-                    </div>
-               </div>
-                <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                   <img src="Assets/placeholder400300.jpg" alt="Company Image 14" class="w-full h-60 object-cover rounded-xl">
-                   <div class="p-4">
-                        <p class="text-light-grey opacity-80">Description of image 14</p>
-                   </div>
-                 </div>
-                <div class="rounded-xl overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="Assets/placeholder400300.jpg" alt="Company Image 15" class="w-full h-60 object-cover rounded-xl">
-                   <div class="p-4">
-                       <p class="text-light-grey opacity-80">Description of image 15</p>
-                   </div>
-                 </div>
-            </div>
-        </div>
-    </section>
-    <footer class="py-6 md:py-8 bg-castleton-green">
-        <div class="container mx-auto max-w-6xl px-4 text-center">
-            <p class="opacity-80 text-light-grey">© 2025 TrustMove Events. All rights reserved.</p>
-        </div>
-    </footer>
-   <script>
+
+           <h3 class="text-2xl font-semibold mb-6 text-light-grey mt-12">Our Commitment to You</h3>
+             <p class="text-light-grey opacity-80 mb-6">At Trust Move Events, we understand that every event is unique. Our team of event specialists will
+             work closely with you to:</p>
+                <ul class="text-light-grey opacity-80 ml-6 mb-8">
+                    <li>Create a customized package that perfectly matches your vision</li>
+                    <li>Provide expert guidance on layout and design</li>
+                    <li>Ensure seamless delivery and setup</li>
+                     <li>Maintain the highest standards of quality and service</li>
+                 </ul>
+                <h3 class="text-2xl font-semibold mb-6 text-light-grey">Booking Information</h3>
+                  <ul class="text-light-grey opacity-80 ml-6 mb-8">
+                    <li>All prices are exclusive of transportation fees</li>
+                    <li>Early booking is recommended, especially for peak seasons</li>
+                    <li>Custom packages available upon request</li>
+                    <li>All prices are subject to availability</li>
+                 </ul>
+           </div>
+     </section>
+    
+    
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
+             const servicesPricingLink = document.getElementById('services-pricing-link')
+             const mobileServicesPricingLink = document.getElementById('mobile-services-pricing-link')
             const galleryLink = document.getElementById('gallery-link');
             const mobileGalleryLink = document.getElementById('mobile-gallery-link')
             const gallerySection = document.getElementById('gallery-section');
+            const servicesPage = document.getElementById('services-page');
             const mainPageContent = document.querySelectorAll('body > *:not(nav):not(footer)'); // Select all direct children of body except for nav and footer.
+              function showServicesPage() {
+                 mainPageContent.forEach(el => el.style.display = 'none');
+                 servicesPage.style.display = 'block';
+                   gallerySection.style.display ='none'
+                   window.history.pushState({page: 'services'}, 'TrustMove Events - Services & Pricing');
+             }
              function showGallery() {
                  mainPageContent.forEach(el => el.style.display = 'none');
                  gallerySection.style.display = 'block';
+                  servicesPage.style.display = 'none';
                    window.history.pushState({page: 'gallery'}, 'TrustMove Events - Gallery');
              }
             function showMainPage() {
                     mainPageContent.forEach(el => el.style.display = 'block');
                     gallerySection.style.display = 'none';
+                     servicesPage.style.display = 'none';
                      window.history.pushState({page:'main'}, "TrustMove Events")
             }
             mobileMenuButton.addEventListener('click', function () {
                 mobileMenu.classList.toggle('hidden');
             });
 
+            servicesPricingLink.addEventListener('click', function(event){
+                 event.preventDefault()
+                 showServicesPage()
+             })
+             mobileServicesPricingLink.addEventListener('click', function(event){
+                  event.preventDefault()
+                 showServicesPage()
+                mobileMenu.classList.add('hidden')
+            })
              galleryLink.addEventListener('click', function(event){
                  event.preventDefault()
                  showGallery()
@@ -346,18 +462,170 @@
                   event.preventDefault()
                  showGallery()
                 mobileMenu.classList.add('hidden')
-
              })
               window.addEventListener('popstate', function(event) {
-                if (event.state && event.state.page === 'gallery'){
+                 if (event.state && event.state.page === 'services'){
+                   showServicesPage();
+                    }
+                  else if (event.state && event.state.page === 'gallery'){
                     showGallery();
-
-                    } else{
+                     }
+                    else{
                     showMainPage()
                     }
-
-            })
+                })
          });
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+
+    <section id="gallery-section" class="py-16 md:py-20 bg-castleton-green-lighter">
+        <div class="container mx-auto max-w-6xl px-4">
+            <h2 class="text-3xl md:text-4xl font-light mb-12 text-center text-light-grey">Our Event Gallery</h2>
+            <p class="text-center text-light-grey opacity-80 mb-8">Showcasing Our Finest Moments</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Gallery Item 1 -->
+                <div class="ASSallery-item">
+                    <div class="Assets bg-castleton-green-light rounded-lg h-64 flex items-center justify-center text-light-grey">
+                        Image placeholder for Wedding Reception
+                    </div>
+                    <h3 class="text-xl font-light mt-4 mb-2 text-light-grey">Elegant Wedding Reception</h3>
+                    <p class="text-light-grey opacity-80">Luxurious setup featuring our premium tent and chiavari chairs arrangement</p>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item">
+                    <div class="image-placeholder bg-castleton-green-light rounded-lg h-64 flex items-center justify-center text-light-grey">
+                        Image placeholder for Corporate Event
+                    </div>
+                    <h3 class="text-xl font-light mt-4 mb-2 text-light-grey">Corporate Gala Dinner</h3>
+                    <p class="text-light-grey opacity-80">Sophisticated evening setup with custom lighting and décor</p>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item">
+                    <div class="image-placeholder bg-castleton-green-light rounded-lg h-64 flex items-center justify-center text-light-grey">
+                        Image placeholder for Birthday Party
+                    </div>
+                    <h3 class="text-xl font-light mt-4 mb-2 text-light-grey">Birthday Celebration</h3>
+                    <p class="text-light-grey opacity-80">Vibrant party setup with balloon arrangements and themed décor</p>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item">
+                    <div class="image-placeholder bg-castleton-green-light rounded-lg h-64 flex items-center justify-center text-light-grey">
+                        Image placeholder for Garden Wedding
+                    </div>
+                    <h3 class="text-xl font-light mt-4 mb-2 text-light-grey">Garden Wedding</h3>
+                    <p class="text-light-grey opacity-80">Outdoor wedding setup with floral arrangements and elegant draping</p>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item">
+                    <div class="image-placeholder bg-castleton-green-light rounded-lg h-64 flex items-center justify-center text-light-grey">
+                        Image placeholder for Conference
+                    </div>
+                    <h3 class="text-xl font-light mt-4 mb-2 text-light-grey">Corporate Conference</h3>
+                    <p class="text-light-grey opacity-80">Professional conference setup with stage and audio-visual equipment</p>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item">
+                    <div class="image-placeholder bg-castleton-green-light rounded-lg h-64 flex items-center justify-center text-light-grey">
+                        Image placeholder for Engagement Party
+                    </div>
+                    <h3 class="text-xl font-light mt-4 mb-2 text-light-grey">Engagement Celebration</h3>
+                    <p class="text-light-grey opacity-80">Intimate setting with romantic lighting and custom decorations</p>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item">
+                    <div class="image-placeholder bg-castleton-green-light rounded-lg h-64 flex items-center justify-center text-light-grey">
+                        Image placeholder for Product Launch
+                    </div>
+                    <h3 class="text-xl font-light mt-4 mb-2 text-light-grey">Product Launch Event</h3>
+                    <p class="text-light-grey opacity-80">Modern setup with branded elements and professional lighting</p>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item">
+                    <div class="image-placeholder bg-castleton-green-light rounded-lg h-64 flex items-center justify-center text-light-grey">
+                        Image placeholder for Graduation Party
+                    </div>
+                    <h3 class="text-xl font-light mt-4 mb-2 text-light-grey">Graduation Celebration</h3>
+                    <p class="text-light-grey opacity-80">Academic-themed décor with celebratory arrangements</p>
+                </div>
+
+                <!-- Gallery Item 9 -->
+                <div class="gallery-item">
+                    <div class="image-placeholder bg-castleton-green-light rounded-lg h-64 flex items-center justify-center text-light-grey">
+                        Image placeholder for Baby Shower
+                    </div>
+                    <h3 class="text-xl font-light mt-4 mb-2 text-light-grey">Baby Shower</h3>
+                    <p class="text-light-grey opacity-80">Gentle color schemes with custom themed decorations</p>
+                </div>
+
+                <!-- Gallery Item 10 -->
+                <div class="gallery-item">
+                    <div class="image-placeholder bg-castleton-green-light rounded-lg h-64 flex items-center justify-center text-light-grey">
+                        Image placeholder for Anniversary
+                    </div>
+                    <h3 class="text-xl font-light mt-4 mb-2 text-light-grey">Anniversary Dinner</h3>
+                    <p class="text-light-grey opacity-80">Romantic setting with premium table arrangements</p>
+                </div>
+
+                <!-- Gallery Item 11 -->
+                <div class="gallery-item">
+                    <div class="image-placeholder bg-castleton-green-light rounded-lg h-64 flex items-center justify-center text-light-grey">
+                        Image placeholder for Office Move
+                    </div>
+                    <h3 class="text-xl font-light mt-4 mb-2 text-light-grey">Corporate Relocation</h3>
+                    <p class="text-light-grey opacity-80">Professional moving services for office equipment and furniture</p>
+                </div>
+
+                <!-- Gallery Item 12 -->
+                <div class="gallery-item">
+                    <div class="image-placeholder bg-castleton-green-light rounded-lg h-64 flex items-center justify-center text-light-grey">
+                        Image placeholder for Sound Setup
+                    </div>
+                    <h3 class="text-xl font-light mt-4 mb-2 text-light-grey">Concert Sound System</h3>
+                    <p class="text-light-grey opacity-80">Professional audio setup with JBL sound equipment</p>
+                </div>
+
+                <!-- Gallery Item 13 -->
+                <div class="gallery-item">
+                    <div class="image-placeholder bg-castleton-green-light rounded-lg h-64 flex items-center justify-center text-light-grey">
+                        Image placeholder for Outdoor Festival
+                    </div>
+                    <h3 class="text-xl font-light mt-4 mb-2 text-light-grey">Outdoor Festival</h3>
+                    <p class="text-light-grey opacity-80">Large-scale event setup with multiple tents and staging</p>
+                </div>
+
+                <!-- Gallery Item 14 -->
+                <div class="gallery-item">
+                    <div class="image-placeholder bg-castleton-green-light rounded-lg h-64 flex items-center justify-center text-light-grey">
+                        Image placeholder for Home Moving
+                    </div>
+                    <h3 class="text-xl font-light mt-4 mb-2 text-light-grey">Residential Moving</h3>
+                    <p class="text-light-grey opacity-80">Careful handling and transport of household items</p>
+                </div>
+
+                <!-- Gallery Item 15 -->
+                <div class="gallery-item">
+                    <div class="image-placeholder bg-castleton-green-light rounded-lg h-64 flex items-center justify-center text-light-grey">
+                        Image placeholder for Charity Event
+                    </div>
+                    <h3 class="text-xl font-light mt-4 mb-2 text-light-grey">Charity Gala</h3>
+                    <p class="text-light-grey opacity-80">Elegant fundraising event setup with formal dining arrangement</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-6 md:py-8 bg-castleton-green">
+        <div class="container mx-auto max-w-6xl px-4 text-center">
+            <p class="opacity-80 text-light-grey">© 2025 TrustMove Events. All rights reserved.</p>
+        </div>
+    </footer>
+
