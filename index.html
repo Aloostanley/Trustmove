@@ -26,7 +26,78 @@
             background-color: var(--color-castleton-green);
             color: var(--color-light-grey);
         }
+         /* Styles for service page images */
+         #services-page .rounded-md img {
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 0.375rem;
+            margin-top: 0.5rem;
 
+        }
+
+
+        /* Styles for gallery page image container */
+        #gallery-section .image-container {
+            max-height: 200px;
+            overflow: hidden;
+            border-radius: 0.375rem;
+        }
+        /* Add styles to make the service page images look like the gallery ones*/
+        #services-page .pricing-item {
+            display: flex;
+            flex-direction: column;
+             margin-bottom: 3rem;
+             }
+         #services-page .pricing-item .image-container {
+              max-height: 200px;
+              overflow: hidden;
+             border-radius: 0.375rem;
+             margin-bottom: 1rem;
+             }
+          #services-page .pricing-item .image-container img{
+           width: 100%;
+           object-fit: cover;
+           max-height: 200px;
+           }
+
+        #services-page .pricing-item h4 {
+             font-size: 1.125rem; /* equivalent of text-xl */
+              font-weight: 600;  /* equivalent of font-semibold */
+             margin-bottom: 0.5rem;
+            color: var(--color-light-grey);
+             }
+         #services-page .pricing-item .price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.25rem;
+              color: var(--color-light-grey);
+             opacity: 0.8;
+
+          }
+          #services-page .pricing-item .price strong{
+             font-weight: 600;  /* equivalent of font-semibold */
+             }
+        #services-page .pricing-item ul {
+            list-style-type: none; /* Remove default bullets */
+             padding-left: 1rem; /* Add some indentation */
+            margin-bottom: 1rem;
+
+         }
+         #services-page .pricing-item ul li {
+              position: relative; /* Needed for bullet positioning */
+           padding-left: 1.25rem; /* Space for bullet */
+           margin-bottom: .25rem;
+            color: var(--color-light-grey);
+             opacity: 0.8;
+        }
+
+        #services-page .pricing-item ul li::before{
+          content: "•";
+          position: absolute;
+          left: 0;
+           color: var(--color-light-grey);
+        }
     </style>
 
   <script src="script.js"></script>
@@ -210,187 +281,201 @@
         </footer>
 
     </section>
-    <section id="services-page" class="py-16 md:py-20 bg-castletongreen-lighter" style="display: none;">
-         <div class="container mx-auto max-w-6xl px-4">
-           <h2 class="text-3xl md:text-4xl font-light mb-12 text-center text-light-grey">Luxury Event Services & Pricing
-               Guide</h2>
-           <p class="text-center text-light-grey opacity-80 mb-8">Creating Unforgettable Moments</p>
+   <section id="services-page" class="py-16 md:py-20 bg-castletongreen-lighter" style="display: none;">
+        <div class="container mx-auto max-w-6xl px-4">
+            <h2 class="text-3xl md:text-4xl font-light mb-12 text-center text-light-grey">Luxury Event Services & Pricing
+                Guide</h2>
+            <p class="text-center text-light-grey opacity-80 mb-8">Creating Unforgettable Moments</p>
            <h3 class="text-2xl font-semibold mb-6 text-light-grey">Our Premium Tent Solutions</h3>
-           <p class="text-light-grey opacity-80 mb-4">Transform any space into an elegant venue with our selection of
+             <p class="text-light-grey opacity-80 mb-4">Transform any space into an elegant venue with our selection of
                premium tents:</p>
-           <div>
-               <h4 class="text-xl font-semibold mb-4 text-light-grey">Classic Plain Tents</h4>
-               <div class="mb-6">
-                   <div class="flex justify-between items-center mb-2">
-                       <p class="text-light-grey opacity-80">Large Events (100 guests):</p>
-                       <p class="text-light-grey font-semibold">3,500 KSH</p>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <div class="pricing-item">
+                   <div class="image-container">
+                         <img src="Assets/2025.jpg" alt="100 guest tent" />
                    </div>
-                   <div class=" rounded-md mt-2">
-                         <img src="Assets/2025.jpg" alt="100 guest tent" class="w-full h-full object-cover rounded-md"/>
+                     <h4>Large Events (100 guests)</h4>
+                      <div class="price">
+                        <p>Price:</p>
+                         <strong>3,500 KSH</strong>
+                     </div>
+                 </div>
+                 <div class="pricing-item">
+                     <div class="image-container">
+                         <img src="Assets/highpeak50seater.jpg" alt="50 guest tent" />
                    </div>
-               </div>
-               <div class="mb-6">
-                   <div class="flex justify-between items-center mb-2">
-                       <p class="text-light-grey opacity-80">Medium Events (50 guests):</p>
-                       <p class="text-light-grey font-semibold">2,500 KSH</p>
-                   </div>
-                   <div class=" rounded-md mt-2">
-                         <img src="Assets/highpeak50seater.jpg" alt="50 guest tent" class="w-full h-full object-cover rounded-md"/>
-                   </div>
-               </div>
-               <div class="mb-6">
-                   <div class="flex justify-between items-center mb-2">
-                       <p class="text-light-grey opacity-80">Intimate Gatherings (20 guests):</p>
-                       <p class="text-light-grey font-semibold">2,000 KSH</p>
-                   </div>
-                   <div class="rounded-md mt-2">
-                       <img src="Assets/20 PAX.jpg" alt="20 guest tent" class="w-full h-full object-cover rounded-md"/>
-                   </div>
-               </div>
-               <div class="mb-6">
-                   <div class="flex justify-between items-center mb-2">
-                       <p class="text-light-grey opacity-80">Specialty 3x3m Tent:</p>
-                       <p class="text-light-grey font-semibold">2,000 KSH</p>
-                   </div>
-                     <div class=" rounded-md mt-2">
-                       <img src="Assets/20 PAX.jpg" alt="3x3m tent" class="w-full h-full object-cover rounded-md"/>
+                  <h4>Medium Events (50 guests)</h4>
+                       <div class="price">
+                           <p>Price:</p>
+                            <strong>2,500 KSH</strong>
+                       </div>
+                </div>
+                <div class="pricing-item">
+                    <div class="image-container">
+                         <img src="Assets/20 PAX.jpg" alt="20 guest tent" />
+                    </div>
+                     <h4>Intimate Gatherings (20 guests)</h4>
+                     <div class="price">
+                       <p>Price:</p>
+                        <strong>2,000 KSH</strong>
                    </div>
                </div>
+               <div class="pricing-item">
+                    <div class="image-container">
+                        <img src="Assets/20 PAX.jpg" alt="3x3m tent" />
+                   </div>
+                    <h4>Specialty 3x3m Tent</h4>
+                     <div class="price">
+                       <p>Price:</p>
+                        <strong>2,000 KSH</strong>
+                  </div>
+                </div>
+                </div>
                <p class="text-light-grey opacity-80 mt-4">Enhance your event with our colored tent options for an
                    additional 2,000 KSH</p>
-           </div>
            <h3 class="text-2xl font-semibold mb-6 text-light-grey mt-12">Elegant Seating Options</h3>
            <p class="text-light-grey opacity-80 mb-4">Choose from our carefully curated selection of seating options:</p>
-           <div>
-               <h4 class="text-xl font-semibold mb-4 text-light-grey">Premium Seating</h4>
-                <div class="mb-6">
-                   <div class="flex justify-between items-center mb-2">
-                       <p class="text-light-grey opacity-80">Chiavari Chairs:</p>
-                       <p class="text-light-grey font-semibold">150 KSH per seat</p>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+               <div class="pricing-item">
+                     <div class="image-container">
+                         <img src="Assets/5.jpeg" alt="Chiavari Chairs" />
                     </div>
-                    <div class="rounded-md mt-2">
-                       <img src="Assets/5.jpeg" alt="Chiavari Chairs" class="w-full h-full object-cover rounded-md"/>
+                   <h4>Chiavari Chairs</h4>
+                     <div class="price">
+                          <p>Price:</p>
+                         <strong>150 KSH per seat</strong>
                    </div>
                </div>
-                <div class="mb-6">
-                    <div class="flex justify-between items-center mb-2">
-                       <p class="text-light-grey opacity-80">Banquet Chairs:</p>
-                       <p class="text-light-grey font-semibold">150 KSH per seat</p>
+                <div class="pricing-item">
+                       <div class="image-container">
+                         <img src="Assets/banquet-chair-blue-jpg.webp" alt="Banquet Chairs" />
                    </div>
-                    <div class="rounded-md mt-2">
-                        <img src="Assets/banquet-chair-blue-jpg.webp" alt="Banquet Chairs" class="w-full h-full object-cover rounded-md"/>
+                    <h4>Banquet Chairs</h4>
+                   <div class="price">
+                       <p>Price:</p>
+                        <strong>150 KSH per seat</strong>
+                  </div>
+               </div>
+               <div class="pricing-item">
+                     <div class="image-container">
+                        <img src="Assets/1.jpeg" alt="Dressed Plastic Chairs" />
+                   </div>
+                     <h4>Dressed Plastic Chairs (with elegant covers)</h4>
+                     <div class="price">
+                         <p>Price:</p>
+                          <strong>50 KSH per seat</strong>
                    </div>
                </div>
-               <h4 class="text-xl font-semibold mb-4 text-light-grey">Classic Seating</h4>
-                  <div class="mb-6">
-                   <div class="flex justify-between items-center mb-2">
-                       <p class="text-light-grey opacity-80">Dressed Plastic Chairs (with elegant covers):</p>
-                       <p class="text-light-grey font-semibold">50 KSH per seat</p>
-                   </div>
-                      <div class=" rounded-md mt-2">
-                         <img src="Assets/1.jpeg" alt="Dressed Plastic Chairs" class="w-full h-full object-cover rounded-md"/>
-                   </div>
-               </div>
-                  <div class="mb-6">
-                    <div class="flex justify-between items-center mb-2">
-                       <p class="text-light-grey opacity-80">Classic Plastic Chairs:</p>
-                       <p class="text-light-grey font-semibold">15 KSH per seat</p>
+                <div class="pricing-item">
+                     <div class="image-container">
+                         <img src="Assets/9.png" alt="Classic Plastic Chairs" />
                     </div>
-                      <div class=" rounded-md mt-2">
-                        <img src="Assets/9.png" alt="Classic Plastic Chairs" class="w-full h-full object-cover rounded-md"/>
+                      <h4>Classic Plastic Chairs</h4>
+                       <div class="price">
+                            <p>Price:</p>
+                          <strong>15 KSH per seat</strong>
                    </div>
                </div>
-           </div>
+            </div>
             <h3 class="text-2xl font-semibold mb-6 text-light-grey mt-12">Bespoke Décor Services</h3>
            <p class="text-light-grey opacity-80 mb-4">Let us transform your venue with our premium décor packages,
                tailored to your vision:</p>
-           <div>
-               <h4 class="text-xl font-semibold mb-4 text-light-grey">Signature Décor Collection</h4>
-                <div class="mb-6">
-                    <div class="flex justify-between items-center mb-2">
-                        <p class="text-light-grey opacity-80">Starting from:</p>
-                         <p class="text-light-grey font-semibold">10,000 KSH to 20,000 KSH</p>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <div class="pricing-item">
+                     <div class="image-container">
+                         <img src="Assets/outdoor-wedding-aisle.jpeg" alt="Signature Decor Collection" />
                     </div>
-                    <div class="rounded-md mt-2">
-                         <img src="Assets/outdoor-wedding-aisle.jpeg" alt="Signature Decor Collection" class="w-full h-full object-cover rounded-md"/>
-                   </div>
+                   <h4>Signature Décor Collection</h4>
+                      <div class="price">
+                       <p>Starting from:</p>
+                       <strong>10,000 KSH to 20,000 KSH</strong>
+                     </div>
+                      <ul>
+                        <li>Custom table centre pieces</li>
+                        <li>Elegant balloon arrangements</li>
+                        <li>Luxurious fabric draping</li>
+                         <li>Strategic lighting enhancement</li>
+                          <li>Floral arrangements (starting from 750 KSH per bouquet)</li>
+                     </ul>
                 </div>
-                 <ul class="text-light-grey opacity-80 ml-6 mb-4">
-                     <li>Custom table centre pieces</li>
-                     <li>Elegant balloon arrangements</li>
-                    <li>Luxurious fabric draping</li>
-                     <li>Strategic lighting enhancement</li>
-                     <li>Floral arrangements (starting from 750 KSH per bouquet)</li>
-                 </ul>
-               <h4 class="text-xl font-semibold mb-4 text-light-grey">Specialty Décor Elements</h4>
-                 <div class="mb-6">
-                     <div class="flex justify-between items-center mb-2">
-                         <p class="text-light-grey opacity-80">LED Chandelier Lighting (10-arm design):</p>
-                         <p class="text-light-grey font-semibold">13,000 KSH</p>
-                    </div>
-                     <div class="rounded-md mt-2">
-                       <img src="Assets/KY-Wedding-Party-Chandelier-1.jpg" alt="LED Chandelier Lighting" class="w-full h-full object-cover rounded-md"/>
-                     </div>
-                 </div>
-                  <div class="mb-6">
-                       <div class="flex justify-between items-center mb-2">
-                         <p class="text-light-grey opacity-80">Curtain Light Displays: from</p>
-                         <p class="text-light-grey font-semibold">1,690 KSH</p>
+                <div class="pricing-item">
+                        <div class="image-container">
+                            <img src="Assets/KY-Wedding-Party-Chandelier-1.jpg" alt="LED Chandelier Lighting" />
                        </div>
-                      <div class=" rounded-md mt-2">
-                         <img src="Assets/LED-String-Net-Light-Wedding-Party-Window-Display-Party-Christmas-Decoration-Light-LED-Curtain-Light.jpg" alt="Curtain Light Displays" class="w-full h-full object-cover rounded-md"/>
-                     </div>
-                     </div>
-                 </div>
-                 <div class="mb-6">
-                     <div class="flex justify-between items-center mb-2">
-                         <p class="text-light-grey opacity-80">Premium Candle Holders: from</p>
-                         <p class="text-light-grey font-semibold">1,800 KSH</p>
-                    </div>
-                     <div class="rounded-md mt-2">
-                           <img src="Assets/candle handlers.jpg" alt="Premium Candle Holders" class="w-full h-full object-cover rounded-md"/>
+                      <h4>LED Chandelier Lighting (10-arm design)</h4>
+                     <div class="price">
+                         <p>Price:</p>
+                        <strong>13,000 KSH</strong>
+                  </div>
+                </div>
+                  <div class="pricing-item">
+                         <div class="image-container">
+                            <img src="Assets/LED-String-Net-Light-Wedding-Party-Window-Display-Party-Christmas-Decoration-Light-LED-Curtain-Light.jpg" alt="Curtain Light Displays" />
                        </div>
-                 </div>
-                  <div class="mb-6">
-                    <div class="flex justify-between items-center mb-2">
-                         <p class="text-light-grey opacity-80">Luxury Cake Stands: from</p>
-                          <p class="text-light-grey font-semibold">1,912 KSH</p>
-                     </div>
-                      <div class=" rounded-md mt-2">
-                           <img src="Assets/pexels-fu-zhichao-176355-587741.jpg" alt="Luxury Cake Stands" class="w-full h-full object-cover rounded-md"/>
-                     </div>
+                     <h4>Curtain Light Displays</h4>
+                      <div class="price">
+                        <p>from:</p>
+                        <strong>1,690 KSH</strong>
+                  </div>
                </div>
-                   <div class="mb-6">
-                     <div class="flex justify-between items-center mb-2">
-                         <p class="text-light-grey opacity-80">Designer Vases: from</p>
-                          <p class="text-light-grey font-semibold">799 KSH</p>
+             <div class="pricing-item">
+                    <div class="image-container">
+                           <img src="Assets/candle handlers.jpg" alt="Premium Candle Holders" />
+                       </div>
+                       <h4>Premium Candle Holders</h4>
+                    <div class="price">
+                        <p>from:</p>
+                         <strong>1,800 KSH</strong>
                     </div>
-                     <div class=" rounded-md mt-2">
-                           <img src="Assets/pexels-ionela-mat-268382825-27180805.jpg" alt="Designer Vases" class="w-full h-full object-cover rounded-md"/>
-                     </div>
+               </div>
+                <div class="pricing-item">
+                       <div class="image-container">
+                           <img src="Assets/pexels-fu-zhichao-176355-587741.jpg" alt="Luxury Cake Stands" />
+                       </div>
+                       <h4>Luxury Cake Stands</h4>
+                       <div class="price">
+                           <p>from:</p>
+                            <strong>1,912 KSH</strong>
+                        </div>
                  </div>
+                <div class="pricing-item">
+                     <div class="image-container">
+                            <img src="Assets/pexels-ionela-mat-268382825-27180805.jpg" alt="Designer Vases" />
+                    </div>
+                     <h4>Designer Vases</h4>
+                      <div class="price">
+                          <p>from:</p>
+                        <strong>799 KSH</strong>
+                   </div>
+               </div>
            </div>
            <h3 class="text-2xl font-semibold mb-6 text-light-grey mt-12">Entertainment Solutions</h3>
-           <div class="mb-6">
-             <div class="flex justify-between items-center mb-2">
-                <p class="text-light-grey opacity-80">Professional JBL Sound System:</p>
-                <p class="text-light-grey font-semibold">14,000 KSH</p>
-              </div>
-             <div class="rounded-md mt-2">
-                 <img src="Assets/srx712.jpg" alt="Professional JBL Sound System" class="w-full h-full object-cover rounded-md"/>
-            </div>
-         </div>
-           <h3 class="text-2xl font-semibold mb-6 text-light-grey mt-12">Additional Services</h3>
-          <div class="mb-6">
-               <div class="flex justify-between items-center mb-2">
-                 <p class="text-light-grey opacity-80">Professional Setup and Transportation:</p>
-                 <p class="text-light-grey font-semibold">6,000-10,000 KSH</p>
-              </div>
-              <div class=" rounded-md mt-2">
-                  <img src="Assets/3-Ton-Lorry-services.jpeg" alt="Professional Setup and Transportation" class="w-full h-full object-cover rounded-md"/>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <div class="pricing-item">
+                     <div class="image-container">
+                          <img src="Assets/srx712.jpg" alt="Professional JBL Sound System" />
+                     </div>
+                     <h4>Professional JBL Sound System</h4>
+                    <div class="price">
+                        <p>Price:</p>
+                        <strong>14,000 KSH</strong>
+                    </div>
                 </div>
-              <p class="text-light-grey opacity-80 ml-6"> (based on location and quantity of items)</p>
-          </div>
+                </div>
+           <h3 class="text-2xl font-semibold mb-6 text-light-grey mt-12">Additional Services</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                  <div class="pricing-item">
+                     <div class="image-container">
+                            <img src="Assets/3-Ton-Lorry-services.jpeg" alt="Professional Setup and Transportation" />
+                    </div>
+                      <h4>Professional Setup and Transportation</h4>
+                      <div class="price">
+                          <p>Price:</p>
+                         <strong>6,000-10,000 KSH</strong>
+                      </div>
+                     <p class="text-light-grey opacity-80 "> (based on location and quantity of items)</p>
+                  </div>
+              </div>
            <h3 class="text-2xl font-semibold mb-6 text-light-grey mt-12">Our Commitment to You</h3>
            <p class="text-light-grey opacity-80 mb-6">At Trust Move Events, we understand that every event is unique.
                Our team of event specialists will
@@ -415,7 +500,7 @@
     </footer>
 
     </section>
-     <section id="gallery-section" class="py-16 md:py-20 bg-castletongreen-lighter" style="display:none;">
+    <section id="gallery-section" class="py-16 md:py-20 bg-castletongreen-lighter" style="display:none;">
         <div class="container mx-auto max-w-6xl px-4">
             <h2 class="text-3xl md:text-4xl font-light mb-12 text-center text-light-grey">Our Event Gallery</h2>
             <p class="text-center text-light-grey opacity-80 mb-8">Showcasing Our Finest Moments</p>
@@ -519,15 +604,10 @@
                 </div>
                  <!-- Gallery Item 5 -->
                  <div class="gallery-item">
-                       <div class="image-container">
-                           <img src="Assets/Azure-Summer-Events-Roundup-2024-Burtynsky-Hero.webp" alt="Corporate Conference" class="w-full h-full object-cover rounded-md"/>
-                     </div>
-                    <h3 class="text-xl font-light mt-4 mb-2 text-light-grey">Art and Design</h3>
-                    <p class="text-light-grey opacity-80">Professional conference setup with stage and audio-visual
-                        equipment</p>
-                </div>
-                <footer class="bg-castletongreen-800 text-lightgrey py-4 mt-10">
-                    <div class="container mx-auto text-center">
-                        <p>© 2025 TrustMove Events</p>
-                    </div>
-                </footer>
+                       <div class="image-container"><img src="Assets/Azure-Summer-Events-Roundup-2024-Burtynsky-Hero.webp" alt="Corporate Conference" class="w-full h-full object-cover rounded-md"/>
+                       </div>
+                      <h3 class="text-xl font-light mt-4 mb-2 text-light-grey">Art and Design</h3>
+                      <p class="text-light-grey opacity-80">Professional conference setup with stage and audio-visual
+                          equipment</p>
+                  </div>
+  
